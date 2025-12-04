@@ -10,5 +10,7 @@ pkgs.mkShell {
     # Zig
     zig
     zls
+    # Julia
+    (julia-bin.withPackages ["LanguageServer" "SymbolServer" "StaticLint" "DSP"])
   ];
 }

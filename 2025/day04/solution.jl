@@ -1,4 +1,5 @@
 using DSP
+using Pkg
 
 function readInput()
     dict = Dict('@' => 1, '.' => 0)
@@ -28,5 +29,10 @@ function removeAll(M)
   println("Total: $(totalRemoved)")
 end
 
+precompile(readInput, ())
+precompile(removeRolls, (Matrix{Int64},))
+precompile(removeAll, (Matrix{Int64},))
+
 M = readInput()
 removeAll(M)
+

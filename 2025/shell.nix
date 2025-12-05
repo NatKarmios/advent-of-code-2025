@@ -12,5 +12,9 @@ pkgs.mkShell {
     zls
     # Julia
     (julia-bin.withPackages ["LanguageServer" "SymbolServer" "StaticLint" "DSP"])
+    # OCaml
+    ocaml
+    ocamlPackages.ocaml-lsp
+    ocamlPackages.ocamlformat
   ];
 }

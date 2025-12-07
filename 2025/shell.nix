@@ -16,5 +16,7 @@ pkgs.mkShell {
     ocaml
     ocamlPackages.ocaml-lsp
     ocamlPackages.ocamlformat
+    # Rust
+    rustup
   ];
 }
